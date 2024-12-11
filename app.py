@@ -2,7 +2,7 @@ import argparse
 import io
 from typing import Any, Dict, List, Tuple, Union
 
-import moviepy.editor as mp
+import moviepy as mp
 import numpy as np
 import streamlit as st
 import torch
