@@ -131,7 +131,7 @@ pip install git+https://github.com/nyrahealth/transformers.git@crisper_whisper
 ```
 
 ### 3.1 Usage with 🤗 transformers
-First make sure that you have a huggingface account and accept the licensing of the [model](https://huggingface.co/nyrahealth/CrisperWhisper). Grab you huggingface access token and login so you are certainly able to download the model.
+First make sure that you have a huggingface account and accept the licensing of the [model](https://huggingface.co/nyrahealth/CrisperWhisper). Grab your huggingface access token and login so you are certainly able to download the model.
 
 ```bash
 huggingface-cli login
@@ -182,7 +182,7 @@ print(crisper_whisper_result)
 
 We also provide a converted model to be compatible with [faster whisper](https://github.com/SYSTRAN/faster-whisper). However, due to the different implementation of the timestamp calculation in faster whisper or more precisely [CTranslate2](https://github.com/OpenNMT/CTranslate2/) the timestamp accuracy can not be guaranteed. 
 
-First make sure that you have a huggingface account and accept the licensing of the [model](https://huggingface.co/nyrahealth/faster_CrisperWhisper). Grab you huggingface access token and login so you are certainly able to download the model.
+First make sure that you have a huggingface account and accept the licensing of the [model](https://huggingface.co/nyrahealth/faster_CrisperWhisper). Grab your huggingface access token and login so you are certainly able to download the model.
 ```bash
 huggingface-cli login
 ``` 
@@ -208,7 +208,7 @@ for segment in segments:
 
 ### 3.3 Commandline usage
 
-First make sure that you have a huggingface account and accept the licensing of the model. Grab you huggingface access token and login so you are certainly able to download the model.
+First make sure that you have a huggingface account and accept the licensing of the model. Grab your huggingface access token and login so you are certainly able to download the model.
 ```bash
     huggingface-cli login
  ```
