@@ -2,7 +2,7 @@ import argparse
 import io
 from typing import Any, Dict, List, Tuple, Union
 
-import moviepy.editor as mp
+import moviepy as mp
 import numpy as np
 import streamlit as st
 import torch
@@ -67,7 +67,7 @@ def wav_to_black_mp4(wav_path: str, output_path: str, fps: int = 25) -> None:
     duration: float = waveform.shape[1] / sample_rate
     audio = mp.AudioFileClip(wav_path)
     black_clip = mp.ColorClip((256, 250), color=(0, 0, 0), duration=duration)
-    final_clip = black_clip.set_audio(audio)
+    final_clip = black_clip.with_audio(audio)
     final_clip.write_videofile(output_path, fps=fps)
 
 
