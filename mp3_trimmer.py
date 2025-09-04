@@ -3,6 +3,14 @@ import os
 from pydub import AudioSegment
 
 def crop_mp3(input_path, start_sec, end_sec):
+    ext = os.path.splitext(input_path)[1].lower()
+    if ext == ".m4a":
+        # Convert m4a to mp3 first
+        audio = AudioSegment.from_file(input_path, format="m4a")
+        mp3_path = os.path.splitext(input_path)[0] + "_converted.mp3"
+        audio.export(mp3_path, format="mp3")
+        input_path = mp3_path
+        print(f"Converted m4a to mp3: {mp3_path}")
     # Load MP3
     audio = AudioSegment.from_mp3(input_path)
     # Crop audio
