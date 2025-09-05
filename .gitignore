@@ -127,3 +127,6 @@ dmypy.json
 
 # conda
 .conda/
+
+# audio files
+audios/
