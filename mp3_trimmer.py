@@ -17,7 +17,7 @@ def crop_mp3(input_path, start_sec, end_sec):
     cropped = audio[start_sec * 1000:end_sec * 1000]
     # Prepare output filename
     base = os.path.splitext(os.path.basename(input_path))[0]
-    output_path = f"{base}_{start_sec}_{end_sec}.mp3"
+    output_path = f"audios/{base}_{start_sec}_{end_sec}.mp3"
     # Export cropped audio
     cropped.export(output_path, format="mp3")
     print(f"Cropped file saved as: {output_path}")
